@@ -4,6 +4,7 @@ import module1 from './modules/module_1'
 import module2 from './modules/module_2'
 import module3 from './modules/module_3'
 import module4 from './modules/module_4'
+import module5 from './modules/module_5'
 
 const PROJECTNAME = {
   init () {
@@ -46,6 +47,12 @@ const PROJECTNAME = {
       const lat = target.dataset.lat
       hiddenInput.setAttribute('value', lat);
     });
+  },
+  jsonpFunc () {
+    const button = document.querySelector('.js-button');
+    button.addEventListener('click', () => {
+      module5()
+    });
   }
 }
 
@@ -54,5 +61,6 @@ PROJECTNAME.init2()
 PROJECTNAME.clickEvent()
 PROJECTNAME.scrollFunc()
 PROJECTNAME.inputFunc()
+PROJECTNAME.jsonpFunc()
 
 window.PROJECTNAME = PROJECTNAME
